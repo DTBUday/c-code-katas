@@ -71,16 +71,16 @@ void merge(int *data, int start, int end)
 
 int main()
 {
-    int n;
+    srand((unsigned) time(NULL));
+    int n = 10;
 
-    printf("How many numbers? ");
-    scanf("%d", &n);
+    printf("How many numbers? %d\n", n);
 
     int *input = (int *) malloc(n * sizeof(int));
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        scanf("%d", &input[i]);
+        input[i] = rand();
     }
 
     merge_sort(input, 0, n - 1);

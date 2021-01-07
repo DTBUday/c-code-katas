@@ -48,16 +48,16 @@ void swap(int *a, int *b)
 
 int main()
 {
+    srand((unsigned) time(NULL));
     int n;
 
-    printf("How many numbers? ");
-    scanf("%d", &n);
+    printf("How many numbers? %d\n", n);
 
     int *input = (int *) malloc(n * sizeof(int));
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        scanf("%d", input + i);
+        input[i] = rand();
     }
 
     selection_sort(input, n);

@@ -23,20 +23,19 @@ int linear_search(int *a, int find, int n)
 
 int main()
 {
-    int n, find;
+    srand((unsigned) time(NULL));
+    int n=10000, find=rand();
 
-    printf("How many items? ");
-    scanf("%d", &n);
+    printf("How many items? %d\n", n);
 
     int *input = (int *) malloc(n * sizeof(int));
 
     printf("Enter numbers: ");
     for (int i = 0; i < n; i++) {
-        scanf("%d", input + i);
+        input[i] = i;
     }
 
-    printf("Find: ");
-    scanf("%d", &find);
+    printf("Find: %d\n", find);
 
     int position = linear_search(input, find, n);
 

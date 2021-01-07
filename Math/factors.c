@@ -35,11 +35,11 @@ Factor get_factors(int n)
 
 int main()
 {
-    int n;
+    srand((unsigned) time(NULL));
+    int n = rand();
     Factor factors;
 
-    printf("%s", "Enter n: ");
-    scanf("%d", &n);
+    printf("%s", "Enter n: %d\n", n);
 
     factors = get_factors(n);
 

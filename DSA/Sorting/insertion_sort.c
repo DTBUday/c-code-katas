@@ -28,16 +28,16 @@ void insertion_sort(int *input, int n)
 
 int main()
 {
-    int n;
+    srand((unsigned) time(NULL));
+    int n = 1000;
 
-    printf("How many numbers? ");
-    scanf("%d", &n);
+    printf("How many numbers? %d\n", n);
 
     int *input = (int *) malloc(n * sizeof(int));
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        scanf("%d", input + i);
+        input[i] = rand();
     }
 
     insertion_sort(input, n);

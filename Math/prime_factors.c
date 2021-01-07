@@ -39,10 +39,10 @@ Prime_Factor prime_factors(unsigned long n)
 
 int main()
 {
-    unsigned long n;
+    srand((unsigned) time(NULL));
+    unsigned long n = rand();
 
-    printf("%s", "Enter n: ");
-    scanf("%lu", &n);
+    printf("%s%lu", "Enter n: ", n);
 
     Prime_Factor factor = prime_factors(n);
 

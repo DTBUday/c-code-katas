@@ -72,14 +72,13 @@ unsigned long sum_even_fibonacci(int a, int b, int c)
 
 int main()
 {
-    int limit;
+    int limit = 30;
 
     print_fibonacci_series(-1, 1);
 
     printf("\n\nSum of even fibonacci up to %d is %lu", LIMIT, sum_even_fibonacci(1, 1, 2));
 
-    printf("\n\nEnter N to print N fibonacci numbers: ");
-    scanf("%d", &limit);
+    printf("\n\nEnter N to print N fibonacci numbers: %d\n", limit);
 
     for (int i = 0; i < limit; i++) {
         printf("%lu ", num_fibonacci(i));

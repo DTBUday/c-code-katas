@@ -50,10 +50,9 @@ int *sieve_of_eratosthenes(int n)
 
 int main()
 {
-    int n, *primes;
+    int n = 10000, *primes;
 
-    printf("%s", "How many data? ");
-    scanf("%d", &n);
+    printf("%s%d\n", "How many data? ", n);
 
     primes = sieve_of_eratosthenes(n);
 

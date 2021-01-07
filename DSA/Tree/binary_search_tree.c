@@ -262,16 +262,16 @@ Node *delete(Node *root, int data)
 
 int main()
 {
+    srand((unsigned) time(NULL));
     Node *n = NULL;
 
-    int total, input, del;
+    int total = 10000, input, del = 0;
 
-    printf("%s", "How many data? ");
-    scanf("%d", &total);
+    printf("%s%d\n", "How many data? ", total);
 
     printf("Enter %d numbers\n", total);
     for (int i = 0; i < total; i++) {
-        scanf("%d", &input);
+        input = i == 0 ? 0 : rand();
         insert(&n, input);
     }
 
@@ -284,8 +284,7 @@ int main()
     printf("%s", "\nPostorder: ");
     postorder(&n);
 
-    printf("%s", "\n\nDelete? ");
-    scanf("%d", &del);
+    printf("%s%d\n", "\n\nDelete? ", del);
 
     Node *found = find(&n, del);
     assert(del == found->data);

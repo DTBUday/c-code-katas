@@ -67,16 +67,16 @@ void swap(int *a, int *b)
 
 int main()
 {
-    int n;
+    srand((unsigned) time(NULL));
+    int n = 100000;
 
-    printf("How many numbers? ");
-    scanf("%d", &n);
+    printf("How many numbers? %d\n", n);
 
     int *input = (int *) malloc(n * sizeof(int));
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        scanf("%d", input + i);
+        input[i] = rand();
     }
 
     quick_sort(input, 0, n - 1);
