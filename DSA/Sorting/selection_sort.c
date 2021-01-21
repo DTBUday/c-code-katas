@@ -57,7 +57,7 @@ int main()
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        input[i] = rand();
+        input[i] = n-i;
     }
 
     selection_sort(input, n);

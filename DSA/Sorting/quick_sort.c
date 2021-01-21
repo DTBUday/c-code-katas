@@ -76,7 +76,7 @@ int main()
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        input[i] = rand();
+        input[i] = n-i;
     }
 
     quick_sort(input, 0, n - 1);

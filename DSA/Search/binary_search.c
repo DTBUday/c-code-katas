@@ -36,7 +36,7 @@ int binary_search(int *a, int find, int n)
 int main()
 {
     srand((unsigned) time(NULL));
-    int n = 10000, find = rand();
+    int n = 10000, find = 1; 
 
     printf("How many items? %d\n", n);
 

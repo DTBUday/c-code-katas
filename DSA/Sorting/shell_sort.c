@@ -49,7 +49,7 @@ void shell_sort(int *input, int n)
 int main()
 {
     srand((unsigned) time(NULL));
-    int n;
+    int n = 1000;
 
     printf("How many numbers? %d\n", n);
 
@@ -57,7 +57,7 @@ int main()
 
     printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++) {
-        input[i] = rand();
+        input[i] = n-i;
     }
 
     shell_sort(input, n);

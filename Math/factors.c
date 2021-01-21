@@ -36,7 +36,7 @@ Factor get_factors(int n)
 int main()
 {
     srand((unsigned) time(NULL));
-    int n = rand();
+    int n = 123456;
     Factor factors;
 
     printf("%s", "Enter n: %d\n", n);

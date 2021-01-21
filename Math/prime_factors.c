@@ -40,7 +40,7 @@ Prime_Factor prime_factors(unsigned long n)
 int main()
 {
     srand((unsigned) time(NULL));
-    unsigned long n = rand();
+    unsigned long n = 123456;
 
     printf("%s%lu", "Enter n: ", n);
 

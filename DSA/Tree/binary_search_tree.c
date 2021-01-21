@@ -271,7 +271,7 @@ int main()
 
     printf("Enter %d numbers\n", total);
     for (int i = 0; i < total; i++) {
-        input = i == 0 ? 0 : rand();
+        input = i;
         insert(&n, input);
     }
 
